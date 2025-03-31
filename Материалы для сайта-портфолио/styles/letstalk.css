@@ -1,0 +1,67 @@
+.partnership {
+    background: linear-gradient(transparent 50%, #5DD9C8 50%)
+}
+
+.partnership-container {
+    width: 80vw;
+    display: flex;
+    background-color: var(--color-purp);
+    border-radius: 12px;
+    margin: 20px auto 0;
+    padding: 3vw;
+    gap: 3vw;
+    color:var(--color-whit);
+    font-size: 20px;
+    align-items: center;
+}
+
+.partnership-container h3 {
+    font: var(--text-table-subheader);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.partnership-container p {
+    margin: auto 0;
+    padding: 0;
+    font: var(--text-box-header);
+    text-align: center;
+}
+
+.partnership-container-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--color-whit);
+    border-radius: 15px;
+    background-color: var(--color-purp);
+    color: var(--color-whit);
+    max-height: 60px;
+}
+
+.btn-link-partnership {
+    margin: 0;
+    padding: 15px 30px;
+    font: var(--text-box-button);
+    text-align: center;
+    /* Отключаем перенос, чтобы flexbox не переносил текст в кнопке. 
+     * Все элементы состоят из текста, который можно перенести, 
+     * но здесь нам это не нужно. Поэтому отключаем перенос. */
+    white-space: nowrap;
+    
+}
+
+.partnership-container-btn:hover {
+    background-color: var(--color-whit);
+    color: var(--color-purp);
+}
+
+
+@media screen and (max-width: 1100px) {
+    .partnership-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}

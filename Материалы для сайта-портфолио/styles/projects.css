@@ -1,0 +1,109 @@
+#projects h2 {
+    margin: 70px 0;
+}
+
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    gap: 2vw;
+    width: 80%;
+}
+
+.project-card {
+    padding: 0;
+    margin: 0;
+    display: block;
+    width: 24vw;
+    height: 13.5vw;
+    box-sizing: border-box;
+    border: solid 3px var(--color-purp);
+    border-radius: 12px;
+    background: url(../assets/images/screenshot.png), var(--color-whit);
+    background-size: cover;
+    overflow: hidden;
+    z-index: 4;
+
+    transition: transform   0.3s ease-in,
+                background  0.3s ease-in,
+                box-shadow  0.3s ease-in,
+                z-index     0.3s ease-out;
+}
+
+.project-card:hover {
+    z-index: 8;
+    transform: scale(1.25);
+    background: var(--color-purp);
+    box-shadow: var(--card-shadow);
+}
+
+.projects-card-caption {
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font: var(--text-proj-desc);
+    text-align: center;
+    color: var(--color-whit);
+
+}
+
+.project-card:hover .projects-card-caption {
+    opacity: 1;
+}
+
+.projects-card-caption a {
+    font: var(--text-bold-button);
+    color: var(--color-whit);
+    margin-top: 30px;
+    padding: 9px 22px;
+    border: 2px solid var(--color-whit);
+    border-radius: 15px;
+}
+
+.projects-card-caption a:hover {
+    background-color: var(--color-whit);
+    color: var(--color-purp);
+}
+
+
+.projects-button {
+    padding: 15px 40px;
+    margin: 100px 0;
+    border: var(--button-border);
+    border-radius: 15px;
+}
+.projects-button:hover {
+    background-color: var(--color-orng);
+    color: var(--color-whit);
+}
+.projects-button-text {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: center;
+    color: inherit;
+    font: var(--text-button);
+    text-align: center;
+    white-space: nowrap;
+    color: inherit;
+}
+
+@media screen and (max-width: 1400px) {
+    .project-card {
+        width: 36vw;
+        height: 20.25vw;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .project-card {
+        width: 64vw;
+        height: 36vw;
+    }
+}

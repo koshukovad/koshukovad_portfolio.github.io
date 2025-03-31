@@ -1,0 +1,36 @@
+/* Настраиваем переход для ссылок и кнопок с hover-эффектом. */
+
+a, button {
+    transition: all 250ms ease-in;
+}
+
+
+/* Отключаем анимацию для пользователей, которые предпочитают уменьшенное движение. */
+@media screen and (prefers-reduced-motion: reduce) {
+ .enter-from-top, .animated {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+@keyframes navbar-enter {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);    
+    }
+    50% {
+        opacity: 0;
+        transform: translateY(10%);
+     
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+
+    }
+}
+
+.navbar-enter {
+    animation: navbar-enter 1s ease-in ;
+}
+

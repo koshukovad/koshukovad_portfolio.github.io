@@ -1,0 +1,23 @@
+#about {
+    background: linear-gradient(180deg, var(--color-turq) 60%, transparent 40%);
+
+}
+
+
+.my_photo-image {
+    display: block;
+    margin: 3vw auto 0;
+    width: 40vw;
+    border: var(--img-border);  
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 900px) {
+    #about {
+        background: var(--color-turq);
+    }   
+    
+    .my_photo-image {
+        width: 90vmin;
+    }
+}

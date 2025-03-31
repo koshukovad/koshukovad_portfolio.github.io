@@ -1,0 +1,141 @@
+#contact_me h2 {
+    text-transform: none;
+}
+
+.form-preview {
+    padding-bottom: 64px;
+}
+
+
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 0;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.form-container img {
+    width: 35vw;
+    height: 35vw;
+    margin-left: 5vw;
+}
+
+form {
+    margin: 0 5vw;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form-sender-data {
+    margin: 0;
+    padding: 0;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.form-field {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.form-field span {
+    margin: 0 0 10px 4px;
+    padding: 0;
+    font: var(--text-form-label);
+    text-align: center;
+}
+
+.form-input {
+    margin: 0;
+    border: 1px solid var(--color-orng);  
+    border-radius: 12px;
+    font: var(--text-p)
+}
+
+.form-sender-data .form-input {
+    min-width: 150px;
+    max-width: 20vw;
+    padding: 0 6px;
+}
+
+.form-text-body {
+    margin: 48px 0 0 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.form-text-body .form-input {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 6px;
+}
+
+.form-submit {
+    margin: 48px 0 0 0;
+    padding: 0;
+    width: 100%;
+    border: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.form-submit button {
+    padding: 15px 40px;
+    margin: 0;
+    background-color: var(--color-whit);
+    border:  var(--button-border);
+    border-radius: 15px;
+    color: var(--color-orng);
+}
+
+.form-submit button:hover {
+    background-color: var(--color-orng);
+    color: var(--color-whit);
+}
+
+.form-button-text {
+    font: var(--text-button);
+    text-align: center;
+    color: inherit;
+}
+
+@media screen and (max-width: 900px) {
+    .form-container {
+        flex-direction: column;
+    }
+
+    .form-container img {
+        width: 80vmin;
+        height: 80vmin;
+        margin-left: 0;
+    }
+
+    form {
+        width: 90vw;
+    }
+
+    .form-sender-data {
+        flex-direction: column;
+    }
+
+    .form-sender-data .form-input {
+        max-width: unset;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}

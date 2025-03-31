@@ -1,0 +1,135 @@
+:root {
+    --color-blck: #141C3A;
+    --color-orng: #FF9235;
+    --color-turq: #5dd9c8;
+    --color-purp: #8063a6;
+    --color-whit: #ffffff;
+
+    --text-p: 400 36px/54px "Tilda Sans", sans-serif;
+    --text-button: 400 25px/30px "Tilda Sans", sans-serif;
+    --text-proj-desc: 400 25px/27px "Tilda Sans", sans-serif;
+    --text-button: 700 25px/30px "Tilda Sans", sans-serif;
+    --text-bold-button: 600 25px/27px "Tilda ans", sans-serif;
+    --text-table: 400 30px/45px "Tilda Sans", sans-serif;
+    --text-table-header: 700 36px/54px "Tilda Sans", sans-serif;
+    --text-table-subheader: 700 30px/45px "Tilda Sans", sans-serif;
+    --text-reviews-info: 400 20px/30px "Tilda Sans", sans-serif;
+    --text-box-header: 600 20px/30px "Tilda Sans", sans-serif;
+    --text-box-button: 700 20px/30px "Tilda Sans", sans-serif;
+    --text-form-label: 400 20px/36px "Tilda Sans", sans-serif;
+    --text-footer: 400 16px/24px "Tilda Sans", sans-serif;
+
+    --nav-shadow: 0px 3px 10px 0px #0000002a;
+    --card-shadow: 5px 5px 10px 0px #00000055;
+
+    --table-border: 1px solid var(--color-turq);
+    --img-border: 3px solid var(--color-turq);
+    --button-border: 2px solid var(--color-orng);  
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    margin-top: 126px;
+    font-family: "Tilda Sans", sans-serif;
+    color: var(--color-blck);
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    /* Отключаем подчеркивание сразу всех
+     * ссылок на странице и отключаем синий
+     * цвет текста. 
+     * Делаем это с помощью наследования цвета
+     * из родительского элемента. */
+    text-decoration: none;
+    color: inherit;
+}
+a:visited {
+    /* Отключаем фиолетовый цвет текста для
+     * посещенных ссылок, также, как и выше. */
+    text-decoration: none;
+    color: inherit;
+    font-family: inherit;
+}
+button, input, textarea {
+    /* Стиль outline появляется не во всех браузерах. 
+     * Но очень портит внешний вид, там,
+     * где он включен. Поэтому отключаем его. */
+    outline: none;
+    appearance: none;
+}
+button:focus, input:focus, textarea:focus {
+    outline: none;
+}
+
+h2 {
+    font-size: 54px;
+    padding: 70px 0 0 0;
+    margin: 0;
+    text-transform: uppercase;
+    text-align: center;
+    font: 700 54px/81px "Tilda Sans", sans-serif;
+    max-width: 90vw;
+}
+
+/* Отключаем стандартное форматирование
+ * для элементов внутри тега <details>. */
+ details > summary {
+    list-style: none;
+}
+
+/* Для Safari */
+details > summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Задаем стили для всех элементов <section> в <main>. */
+.container {
+    /* Задаем ширину контейнера 100% от ширины экрана.
+     * Высота будет зависеть от высоты контента. */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    scroll-margin-top: 126px;
+}
+
+@media screen and (max-width: 900px) {
+    .container {
+        scroll-margin-top: 300px;
+    }
+    
+}
+
+.text-wrapper {
+    font: var(--text-p);
+    width: 70%;
+    margin: 48px auto 0;
+    padding: 0;
+    text-align: center;
+}
+
+.color-black {
+    /* черный цвет текста */
+    color: var(--color-blck);
+}
+
+.color-orange {
+    /* оранжевый цвет текста */
+    color: var(--color-orng);
+}
+
+.background-turquoise {
+    /* бирюзовый цвет фона */
+    background-color: var(--color-turq);
+}
+
